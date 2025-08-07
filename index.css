@@ -1,7 +1,15 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 body{
     box-sizing: border-box;
     margin: 0;
+    font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+
 
 /* Layout */
 
@@ -11,8 +19,39 @@ body{
     grid-template-rows: 1fr 4fr;
 }
 
-.header {
+header {
     grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 2rem;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 2rem;
+}
+
+.user-links {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .sidebar {
@@ -20,6 +59,8 @@ body{
     grid-row: 1 / 3;
     display: grid;
     grid-template-rows: 1fr 2fr 2fr;
+    align-items: start;
+    justify-content: start;
 }
 
 .logo {
@@ -32,8 +73,6 @@ body{
 .sidebar > ul {
     display: flex;
     flex-direction: column;
-    align-items: space-around;
-    justify-content: center;
 }
 
 .sidebar > ul > li {
@@ -68,3 +107,34 @@ body{
     color:#468ECD
 }
 
+.search > input {
+    background-color: #E2E7EE;
+    border-style: none;
+    border-radius: 15px;
+    width: 75%;
+    padding: 5px 10px;
+}
+
+.avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.user-info p, h2 {
+    margin:0;
+}
+
+button {
+    border-style: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #468ECD;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+button:hover {
+    color: #468ECD;
+    background-color: #E2E7EE;
+}
